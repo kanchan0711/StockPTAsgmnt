@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../store/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { VERIFICATION_API } from '../utils/Constant';
 
 const useOTPVerification = () => {
   const { userName, setAccessToken } = useContext(AuthContext); // Use context
@@ -9,7 +10,7 @@ const useOTPVerification = () => {
 
   const handleOtpVerification = async (otp) => {
     try {
-      const response = await axios.post('https://internal.stockpathshala.in/api/v1/verify-login-register', {
+      const response = await axios.post( VERIFICATION_API, {
         user_name: userName,
         otp: otp,
       });

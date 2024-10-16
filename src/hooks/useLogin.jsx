@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../store/AuthContext';
+import { LOGIN_API } from '../utils/Constant';
 // import { useNavigate } from 'react-router-dom';
 
 const useLogin = () => {
@@ -11,7 +12,7 @@ const useLogin = () => {
   // The login function to call manually
   const handleLogin = async (mobileNum) => {
     try {
-      const response = await axios.post('https://internal.stockpathshala.in/api/v1/login-register', {
+      const response = await axios.post(LOGIN_API, {
         user_name: mobileNum,
         hash_code: '96pYMmXfHNR',
       });

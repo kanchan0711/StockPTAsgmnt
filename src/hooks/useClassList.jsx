@@ -2,9 +2,10 @@ import axios from 'axios';
 import { useContext } from 'react';
 import { AuthContext } from '../store/AuthContext';
 import { useQuery } from 'react-query';
+import { LISTING_APP } from '../utils/Constant';
 
 const fetchClasses = async (accessToken) => {
-  const response = await axios.get('https://internal.stockpathshala.in/api/v1/live_classes', {
+  const response = await axios.get(LISTING_APP, {
     headers: {
       Accept: 'application/json',
       Authorization: `Bearer ${accessToken}`,
