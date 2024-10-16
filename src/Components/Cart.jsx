@@ -9,9 +9,7 @@ const formattedDate = currentDate.toISOString().split('T')[0];
 
   return (
     <div>
-      {/* Apply shimmer-effect class here */}
-      <div className="m-6 shadow-2xl rounded-lg sm:w-[600px] lg:w-[450px] h-[470px] border-2 border-gray-200 shimmer-effect">
-        {/* Card content */}
+      <div className="m-6 shadow-2xl rounded-lg sm:w-[600px] lg:w-[450px] h-[470px] border-2 border-gray-200 ">
         <div className="bg-[#5a62ae] text-white border rounded-lg shadow-md px-4 py-2 flex flex-col h-[370px] relative overflow-hidden">
           <span className="inline-block bg-white text-purple-800 px-2 py-1 rounded-lg text-xs uppercase w-10">
             {is_free ? 'Free' : 'Paid'}
@@ -32,7 +30,6 @@ const formattedDate = currentDate.toISOString().split('T')[0];
               </div>
             </div>
 
-            {/* Instructor Image */}
             <div className="ml-4">
               <img
                 src={image}
@@ -48,7 +45,6 @@ const formattedDate = currentDate.toISOString().split('T')[0];
           </div>
         </div>
 
-        {/* Buttons */}
         <div className="flex justify-between px-4 py-6">
           <button className="bg-[#5a62ae] hover:bg-purple-400 text-white px-4 py-2 rounded-md">
             Register Now

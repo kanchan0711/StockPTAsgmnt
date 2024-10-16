@@ -22,16 +22,15 @@ const fetchClasses = async (accessToken) => {
 const useClassList = () => {
   const { accessToken, setClasses } = useContext(AuthContext);
 
-  // Use the useQuery hook for data fetching and caching
   const { data, error, isLoading } = useQuery(
-    ['classes', accessToken],  // Unique key for the query, includes accessToken as a dependency
-    () => fetchClasses(accessToken),  // The function that fetches the data
+    ['classes', accessToken],  
+    () => fetchClasses(accessToken), 
     {
-      enabled: !!accessToken,  // Fetching is only enabled if accessToken exists
+      enabled: !!accessToken,  
       onSuccess: (data) => {
-        setClasses(data);  // Optionally, update the global state with fetched data
+        setClasses(data);  
       },
-      refetchOnWindowFocus: true,  // Refetch data when window is focused (React Query default behavior)
+      refetchOnWindowFocus: true,  
     }
   );
 

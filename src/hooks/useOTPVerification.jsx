@@ -16,14 +16,12 @@ const useOTPVerification = () => {
       });
 
       if (response.status === 200) {
-        const token = response.data.token; // Assuming `token` is the full token object
-        setAccessToken(token); // Save token globally
+        const token = response.data.token; 
+        setAccessToken(token); 
         
-        // Save the token to localStorage (or sessionStorage)
-        localStorage.setItem("accessToken", token); // Ensure the correct structure of token
-        
-        // Redirect to dashboard or private route
-        navigate('/live-classes'); // Correct navigation method
+        localStorage.setItem("accessToken", token); 
+       
+        navigate('/live-classes'); 
       }
     } catch (error) {
       console.error('OTP verification failed:', error);

@@ -11,14 +11,13 @@ const App = () => {
     <AuthProvider>
       <Router>
         <Routes>
-          {/* Public Route */}
           
           <Route path="/" element={
             <PublicRoute>
             <Login />
             </PublicRoute>} />
           
-          {/* Private Route */}
+        
           <Route
             path="/live-classes"
             element={

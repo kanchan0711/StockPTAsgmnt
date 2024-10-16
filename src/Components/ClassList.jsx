@@ -5,14 +5,14 @@ import Cart from "./Cart";
 import Shimmer from "./Shimmer";
 
 const ClassList = () => {  
-  // Use the custom hook to fetch classes
+  
   useClassList();
 
-  // Access the classes from AuthContext
+  
   const { classes } = useContext(AuthContext);
   console.log(classes);
 
-  // Check if classes exist before trying to map over them
+  
   return (
     <>
     <h1 className=" text-center m-8 text-3xl font-bold">Available classes</h1>
@@ -29,7 +29,7 @@ const ClassList = () => {
              <Shimmer/>
              <Shimmer/>
           </div>
-          // Handle the case where there are no classes
+          
         )}
       
     </div>

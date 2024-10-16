@@ -2,8 +2,8 @@ import { useState } from 'react';
 import useOTPVerification from '../hooks/useOTPVerification';
 
 const OTPVerificationPage = () => {
-  const [otp, setOtp] = useState(''); // Use context
- // For navigation
+  const [otp, setOtp] = useState(''); 
+
    const { handleOtpVerification} = useOTPVerification()
  
 
