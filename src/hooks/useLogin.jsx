@@ -7,8 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const useLogin = () => {
   const [error, setError] = useState('');
-  const { setUserName } = useContext(AuthContext);
-  const navigate = useNavigate();  
+  const { setUserName } = useContext(AuthContext); 
   const handleLogin = async (mobileNum) => {
     try {
       const response = await axios.post(LOGIN_API, {
@@ -19,7 +18,6 @@ const useLogin = () => {
       if (response.status === 200) {
         console.log(response)
         setUserName(mobileNum);
-        navigate('/otp-verification'); 
       }
     } catch (error) {
       setError('Login failed. Please try again.');
